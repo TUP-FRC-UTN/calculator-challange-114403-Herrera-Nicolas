@@ -1,0 +1,14 @@
+<div class="container border p-2 mt-2" style="width: 300px">
+  <h1>Calculadora</h1>
+  <p class="lead text-center">Valor 1</p>
+  <input type="number" class="form-control" [(ngModel)]="num1" />
+  <p class="lead text-center">Valor 2</p>
+  <input type="number" class="form-control" [(ngModel)]="num2" />
+  <p class="lead text-center mt-2">Resultado</p>
+  <input type="text" disabled class="form-control" [(ngModel)]="result" />
+  <app-calc-logic
+    [num1]="num1"
+    [num2]="num2"
+    (sum)="result = $event"
+  ></app-calc-logic>
+</div>
